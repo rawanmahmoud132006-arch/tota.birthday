@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy 21st Birthday Tota</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap');
+
+*{box-sizing:border-box}
+
+body{
+ margin:0;
+ min-height:100vh;
+ padding:20px;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ background:linear-gradient(135deg,#e9dcef,#f9e8ef,#eee3f4);
+ font-family:'Cairo',sans-serif;
+ color:#62466f;
+}
+
+.container{width:100%;max-width:600px}
+
+.screen{
+ display:none;
+ background:#fffafd;
+ border-radius:25px;
+ padding:30px 22px;
+ text-align:center;
+ box-shadow:0 12px 35px #76558f30;
+ animation:appear .5s ease;
+}
+
+.screen.active{display:block}
+
+@keyframes appear{
+ from{opacity:0;transform:translateY(15px)}
+ to{opacity:1;transform:translateY(0)}
+}
+
+h1{font-size:42px;color:#76558f;margin:8px}
+h2{color:#76558f}
+.name{color:#bd7c9e}
+.bunny{font-size:90px;margin:15px}
+
+button,.video-link{
+ border:none;
+ border-radius:30px;
+ padding:12px 25px;
+ margin:10px 5px;
+ background:#9271a8;
+ color:white;
+ font-family:inherit;
+ font-size:15px;
+ cursor:pointer;
+ text-decoration:none;
+ display:inline-block;
+}
+
+button:hover,.video-link:hover{background:#76558f}
+
+.secondary{background:#f0dce9;color:#754f72}
+
+.cake{
+ position:relative;
+ width:220px;
+ height:150px;
+ margin:65px auto 35px;
+}
+
+.cake-body{
+ position:absolute;
+ bottom:0;
+ width:220px;
+ height:110px;
+ background:#f2d8d0;
+ border-radius:10px 10px 25px 25px;
+ border-bottom:12px solid #dfb0c4;
+}
+
+.cake-top{
+ position:absolute;
+ top:-5px;
+ width:220px;
+ height:48px;
+ background:#fff3e9;
+ border-radius:50%;
+ border:3px solid #edced5;
+}
+
+.candle{
+ position:absolute;
+ top:-48px;
+ width:9px;
+ height:45px;
+ background:repeating-linear-gradient(45deg,white 0 5px,#d99ab8 5px 10px);
+ z-index:2;
+}
+
+.c1{left:80px}
+.c2{left:105px}
+.c3{left:130px}
+
+.flame{
+ position:absolute;
+ top:-14px;
+ left:1px;
+ width:8px;
+ height:13px;
+ background:#ffc75e;
+ border-radius:50%;
+ box-shadow:0 0 12px orange;
+ animation:flicker .6s infinite alternate;
+}
+
+@keyframes flicker{
+ to{transform:scale(.8)}
+}
+
+.plate{
+ position:absolute;
+ bottom:-8px;
+ left:-15px;
+ width:250px;
+ height:14px;
+ background:#d4c0dc;
+ border-radius:50%;
+}
+
+.gift{font-size:100px;animation:bounce 1s infinite}
+
+@keyframes bounce{
+ 50%{transform:translateY(-10px)}
+}
+
+.letter{
+ text-align:right;
+ background:#fff7f1;
+ border:1px solid #f0dfd4;
+ padding:20px;
+ border-radius:18px;
+ line-height:2.1;
+}
+
+.letter p{margin:0 0 12px}
+
+.signature{
+ direction:ltr;
+ font-family:Georgia,serif;
+ font-style:italic;
+ font-size:30px;
+ color:#b36d94;
+ margin-top:15px;
+}
+
+.small{font-size:12px;color:#9a829e}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- SCREEN 1 -->
+<section class="screen active" id="s1">
+
+<p>A LITTLE SURPRISE FOR</p>
+
+<div class="bunny">🐰</div>
+
+<h1>Happy Birthday</h1>
+<h1 class="name">TOTA ♡</h1>
+
+<p>21 looks beautiful on you!</p>
+
+<div class="cake">
+ <div class="cake-body"></div>
+ <div class="cake-top"></div>
+ <div class="candle c1"><div class="flame"></div></div>
+ <div class="candle c2"><div class="flame"></div></div>
+ <div class="candle c3"><div class="flame"></div></div>
+ <div class="plate"></div>
+</div>
+
+<button onclick="go(2)">يلا نبدأ المفاجأة ♥</button>
+
+</section>
+
+<!-- SCREEN 2 -->
+<section class="screen" id="s2">
+
+<div class="bunny">🐰💗</div>
+
+<h2>جاهزة لمفاجأتك؟</h2>
+
+<p>في حاجة صغيرة معمولة مخصوص عشانك يا توتا.</p>
+
+<button class="secondary" onclick="go(3)">مش جاهزة 🙈</button>
+<button onclick="go(3)">طبعًا جاهزة! ♥</button>
+
+</section>
+
+<!-- SCREEN 3 -->
+<section class="screen" id="s3">
+
+<div class="gift">🎁</div>
+
+<h2>هدية صغيرة لقلب كبير</h2>
+
+<p>افتحيها وشوفي قد إيه إنتِ غالية.</p>
+
+<button onclick="go(4)">افتحي الهدية ♡</button>
+
+</section>
+
+<!-- SCREEN 4 -->
+<section class="screen" id="s4">
+
+<h2>يا توتا، ❤️</h2>
+
+<div class="letter">
+
+<p>مش عارفة أبدأ كلامي منين، بس عايزاكي تعرفي إن وجودك في حياتي من الحاجات اللي أنا ممتنة ليها بجد.</p>
+
+<p>يمكن مش بعرف أقولك كل يوم إنتِ غالية عندي قد إيه، ويمكن ساعات الكلام مبيعرفش يوصف اللي جوانا، بس إنتِ بالنسبالي مش مجرد صاحبة، إنتِ حتة حلوة من أيامي وذكريات كتير نفسي أفضل أعيشها معاكي.</p>
+
+<p>في يوم ميلادك، أنا مش بتمنالك بس سنة حلوة، أنا بتمنالك عمر كامل مليان راحة وفرحة ونجاح، وإن كل حاجة نفسك فيها تيجي لحد عندك، وإن عيونك متشوفش غير الفرحة، وقلبك ميتوجعش أبدًا.</p>
+
+<p>عايزاكي تفضلي دايمًا بنفس روحك وضحكتك وتفاصيلك اللي بتخليكي إنتِ، ومتخليش أي حاجة في الدنيا تطفي النور اللي جواكي.</p>
+
+</div>
+
+<button onclick="go(5)">كمّلي يا توتا ♡</button>
+
+</section>
+
+<!-- SCREEN 5 -->
+<section class="screen" id="s5">
+
+<div class="bunny">🐰✨</div>
+
+<div class="letter">
+
+<p>ولو في يوم نسيتي إنتِ قد إيه مميزة، افتكري إن في حد في الدنيا بيحمد ربنا إنك جزء من حياته، وبيحبك أكتر من كل الكلام اللي ممكن يتقال.</p>
+
+<p>كل سنة وإنتِ حبيبتي وصاحبتي وأجمل TOTA في الدنيا. يا رب أفضل جنبك في أعياد ميلاد كتير جاية، ونفضل نكبر ونضحك ونفتكر كل تفاصيلنا سوا.</p>
+
+<p><strong>ولو خيروني بين إني أعرفك من جديد أو أعيش كل العمر من غيرك، هختارك في كل مرة. ♡</strong></p>
+
+</div>
+
+<h2>Happy 21st Birthday</h2>
+
+<p>بحبك أكتر مما تتخيلي، وكل سنة وإنتِ ليا.</p>
+
+<div class="signature">
+Forever yours,<br>
+rony ♡
+</div>
+
+<a class="video-link"
+href="https://vt.tiktok.com/ZSp64LEve/"
+target="_blank">
+فيديو ليكي ♡
+</a>
+
+<br>
+
+<button class="secondary" onclick="go(1)">من الأول تاني</button>
+
+<p class="small">Made with love, just for Tota</p>
+
+</section>
+
+</div>
+
+<script>
+function go(number){
+ document.querySelectorAll('.screen').forEach(function(screen){
+  screen.classList.remove('active');
+ });
+
+ document.getElementById('s'+number).classList.add('active');
+
+ window.scrollTo({
+  top:0,
+  behavior:'smooth'
+ });
+}
+</script>
+
+</body>
+</html>
